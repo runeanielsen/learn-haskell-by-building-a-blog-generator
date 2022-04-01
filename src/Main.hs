@@ -3,11 +3,13 @@ main = putStrLn (render myhtml)
 
 myhtml :: Html
 myhtml =
-  html_ "My title" (append_
-                    (h1_ "Heading")
-                    (append_
-                      (p_ "Paragraph #1")
-                      (p_ "Paragraph #2")))
+  html_
+  "My title"
+  (append_
+   (h1_ "Heading")
+   (append_
+    (p_ "Paragraph #1")
+    (p_ "Paragraph #2")))
 
 newtype Html
   = Html String
