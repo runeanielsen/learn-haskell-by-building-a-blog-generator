@@ -27,11 +27,11 @@ code_ = Structure . el "pre"
 
 ul_ :: [Structure] -> Structure
 ul_ =
-  Structure . el "ul" . concat . map (el "li" .getStructureString)
+  Structure . el "ul" . concat . map (el "li" . getStructureString)
 
 ol_ :: [Structure] -> Structure
 ol_ =
-  Structure . el "ol" . concat . map (el "li" .getStructureString)
+  Structure . el "ol" . concat . map (el "li" . getStructureString)
 
 el :: String -> String -> String
 el tag content =
